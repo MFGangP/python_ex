@@ -11,6 +11,7 @@ dic["j"] = 200
 dic["m"] = 300
 dic["z"] = 400
 dic["x"] = 500
+print(dic)
 # 키의 값으로 정렬을 해봄
 li1 = (sorted(dic.values()))
 li2 = (sorted(dic.keys()))
@@ -40,3 +41,12 @@ for k, v in OrderedDict(sorted(dic1.items(), key=sort_by_key)).items():
 
 # li3 = sorted(dic1.items(), key=sort_by_key)
 # print(li3)
+
+# 딕셔너리의 동등성 비교
+# 동등성은 논리적 동등이라는 것을 의미한다. 논리적 동등이란 주소는 다르지만
+# 요소들의 값이 순서가 비록 틀리더라도 논리적 동등으로 바라보는 시점이다.
+str1 = "신은혁"
+str2 = str("신은혁")
+print(id(str1))
+print(id(str2))
+print(str1 == str2)
